@@ -99,4 +99,4 @@ img {
   a.prev_slide:hover{opacity: 1;border: 2px yellow solid} 
   a.next_slide:hover{opacity: 1; border: 2px yellow solid} 
 
-  .thieList{overflow: scroll; height: 300px;}
+  .theList{overflow: scroll; height: 300px;}

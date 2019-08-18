@@ -3,10 +3,7 @@
 $(function () {
 
     $.ajax({
-        type: "GET",
-        url: "http://api.citybik.es/v2/networks",
-        success: function (data) {
-            // console.log(data)
+        type: "get", url: "http://api.citybik.es/v2/networks", success: function (data) {
             const cities = data.networks.reduce((citiesOBJ, network) => {
                 const { location, company } = network
                 const { city } = location
@@ -23,9 +20,9 @@ $(function () {
 
             console.log(countries)
 
-            $("#city-select").html(getCitiesSelect(Object.keys(cities)));
+            $("#selectCity").html(getCitiesSelect(Object.keys(cities)));
             $("#company-list").html(getCompaniesList(cities[Object.keys(cities)[0]]))
-            $("#city-select").on("change", function () {
+            $("#selectCity").on("change", function () {
                 $("#company-list").html(getCompaniesList(cities[this.value]))
             })
 
@@ -43,7 +40,7 @@ function getCitiesSelect(dataArray) {
 }
 
 function getCompaniesList(cityArray) {
-    if (!Array.isArray(cityArray[0])) return `<li class="list-group-item"> ${cityArray} </li>`
+    if (!Array.isArray(cityArray[0])) return `<li > ${cityArray} </li>`
     return cityArray.reduce((itemsString, companyArray) => {
         const tempString = companyArray.map(company => `<li class="list-group-item"> ${company} </li>`)
         itemsString += tempString.join("")
@@ -72,4 +69,4 @@ function getLocationList(countryArray) {
         itemsString += tempString.join("")
         return itemsString
     }, [])
-}
+}////////////////fdsfsdfsdfsdfsdf
