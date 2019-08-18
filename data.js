@@ -27,7 +27,7 @@ $(function () {
             })
 
             $("#country-list").html(getCountriesSelect(Object.keys(countries)))
-            $(".country-name").css({ "cursor": "pointer" })
+            $(".country-name").css({ "cursor": "grabbing" })
             $(".country-name").on("click", function () {
                 $("#location-list").html(getLocationList(countries[this.id]))
             })
@@ -63,7 +63,7 @@ function getLocationList(countryArray) {
             return itemsString
         }
         const tempString = companyArray.company.map((network) => {
-            return `<li class="list-group-item"> <b>${network}</b> ${companyArray.city}:
+            return `<li class="list-group-item"> ${network} ${companyArray.city}:
              alt: ${companyArray.latitude} long: ${companyArray.longitude}</li>`
         })
         itemsString += tempString.join("")
