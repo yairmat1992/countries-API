@@ -1,0 +1,102 @@
+body{background-image: url('https://geology.com/world/world-map-310.gif');background-repeat: no-repeat;
+background-size: 100%}
+
+img {
+    position: relative;
+    display: block;
+    float: left;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    
+}
+
+.search{
+  font-size: 30px
+}
+.btn{background-color: cadetblue;}
+.btn:hover{background-color: rgb(47, 146, 150);opacity: 1;font-weight: 900;border:black solid 2px}
+.hMain{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: rgb(14, 68, 9)}
+.capital{
+    position: absolute;
+    top: 120px;
+    align-content: center;
+    right: 220px;
+    display:block;
+    size: 50px;
+    color: rgb(13, 99, 121);
+        font-size: 20px
+}
+
+#carousle {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    border-radius: 4px;
+  }
+  
+  #carousle ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    list-style: none;
+  }
+  
+  #carousle ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 300px;
+    background: rgb(209, 171, 171);
+    text-align: center;
+    line-height: 300px;
+  }
+  
+    
+  
+  
+  a.prev_slide {
+    border-radius: 0 2px 2px 0;
+    opacity: 1;
+    position: absolute;
+   width: 50px;
+    z-index: 999;
+    display: block;
+    opacity: 0.8;
+    width: auto;
+    height: auto;
+    background: rgb(255, 255, 255);
+    color: rgb(151, 14, 14);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 40px;
+       cursor: pointer;
+  }
+  
+  a.next_slide {
+    right: 0;opacity: 1;
+    border-radius: 2px 0 0 2px;
+
+    position: absolute;
+   
+    z-index: 999;
+    display: block;
+    opacity: 0.6;
+    width: auto;
+    height: auto;
+    background: rgb(255, 255, 255);
+    color: rgb(151, 14, 14);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 40px;
+       cursor: pointer;
+  }
+
+  a.prev_slide:hover{opacity: 1;border: 2px yellow solid} 
+  a.next_slide:hover{opacity: 1; border: 2px yellow solid} 
+
+  .thieList{overflow: scroll; height: 300px;}
